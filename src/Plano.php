@@ -60,7 +60,7 @@ class Plano extends BrazmovelController{
     
     public function cancelar($planoId){        
         try{
-            $response = $this->http->get(vsprintf('v1/plan/%s/cancel', [
+            $response = $this->http->post(vsprintf('v1/plan/%s/cancel', [
                 $planoId
             ]), [
                 "headers" => [
