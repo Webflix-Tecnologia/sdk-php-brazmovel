@@ -33,7 +33,7 @@ class Pagamento extends BrazmovelController{
     
     public function capturar($pagamentoId){        
         try{
-            $response = $this->http->get(vsprintf('v1/payment/%s/capture', [
+            $response = $this->http->post(vsprintf('v1/payment/%s/capture', [
                 $pagamentoId
             ]), [
                 "headers" => [
